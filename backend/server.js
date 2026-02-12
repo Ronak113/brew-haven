@@ -9,9 +9,8 @@ const app = express();
 app.use(cors({
     origin: [
         'http://localhost:3000',
-        'https://restaurant-frontend-phi.vercel.app'
-    ],
-    credentials: true
+        'https://brew-haven-frontend.onrender.com'
+    ]    
 }));
 app.use(express.json());
 
