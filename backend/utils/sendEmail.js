@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const dns = require("dns");
+const dns = require("node:dns");
 dns.setDefaultResultOrder("ipv4first");
 
 
