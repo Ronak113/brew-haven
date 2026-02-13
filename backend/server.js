@@ -8,8 +8,7 @@ const app = express();
 
 app.use(cors({
     origin: 
-    "https://brew-haven-omega.vercel.app/",
-       
+    "https://brew-haven-omega.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
      
