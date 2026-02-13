@@ -10,7 +10,7 @@ app.use(cors({
     origin: 
     "https://brew-haven-omega.vercel.app/",
        
-    method: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
      
 }));
@@ -23,9 +23,9 @@ app.use('/api/contact', contactRoutes);
 const bookTableRoutes = require('./routes/bookTableRoutes');
 app.use('/api/book-table', bookTableRoutes);
 
-// Port
-// const PORT = process.env.PORT || 5000;
 
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`);
-// });
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
