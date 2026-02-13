@@ -9,7 +9,7 @@ const app = express();
 app.use(cors({
     origin: [
         'http://localhost:3000',
-        'https://brew-haven-frontend.onrender.com'
+        
     ]    
 }));
 app.use(express.json());
