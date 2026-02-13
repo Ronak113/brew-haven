@@ -7,10 +7,12 @@ const db = require('./config/db');
 const app = express();
 
 app.use(cors({
-    origin: [
-        'http://localhost:3000',
-        
-    ]    
+    origin: 
+    "https://brew-haven-omega.vercel.app/",
+       
+    method: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+     
 }));
 app.use(express.json());
 
@@ -22,8 +24,8 @@ const bookTableRoutes = require('./routes/bookTableRoutes');
 app.use('/api/book-table', bookTableRoutes);
 
 // Port
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server is running on port ${PORT}`);
+// });
