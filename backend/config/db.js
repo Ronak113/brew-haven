@@ -17,4 +17,9 @@ db.connect((err) => {
   }
 });
 
+db.query("SELECT DATABASE() AS db", (err, result) => {
+  console.log("👉 Using DB:", result[0].db);
+});
+
+
 module.exports = db;
