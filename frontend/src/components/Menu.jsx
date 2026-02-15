@@ -22,6 +22,13 @@ const MenuData = [
         name: "Cappuccino",
         description: "A bold shot of espresso diluted with hot water for a smooth taste.",
     },
+    {
+        id: 4,
+        img: Img2,
+        name: "Cappuccino",
+        description: "A bold shot of espresso diluted with hot water for a smooth taste.",
+    }
+
 ];
 const Menu = () => {
   return (
