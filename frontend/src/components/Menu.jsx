@@ -50,7 +50,9 @@ const Menu = () => {
                         <div className='text-center px-6 pb-6 pt-2'>
                             <h2 className='text-2xl font-semibold mb-2'>{menu.name}</h2>
                             <p className='text-sm text-gray-500 group-hover:text-white duration-high line-clamp-2'>{menu.description}</p> 
-                            
+                            <div className='flex justify-between mt-5 px-6 items-center'>
+                                <p className='text-lg font-semibold'>$3.75</p>
+                            </div>
                         </div> 
                     </div>  
                 ))}
