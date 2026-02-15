@@ -6,20 +6,21 @@ const db = mysql.createConnection({
   user: process.env.MYSQLUSER,
   password: process.env.MYSQLPASSWORD,
   database: process.env.MYSQLDATABASE,
-  port: process.env.MYSQLPORT
+  port: process.env.MYSQLPORT,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
-db.connect((err) => {
+db.getConnection((err,connection) => {
   if (err) {
     console.error('❌ Error connecting to the database:', err);
   } else {
     console.log('✅ Connected to the MySQL database.');
+    connection.release();
   }
 });
 
-db.query("SELECT DATABASE() AS db", (err, result) => {
-  console.log("👉 Using DB:", result[0].db);
-});
 
 
 module.exports = db;
