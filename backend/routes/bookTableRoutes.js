@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
-import sendEmail from "../utils/sendEmail.js";
+const sendEmail = require('../utils/sendEmail');
 
 
 router.post('/', async (req, res) => {
