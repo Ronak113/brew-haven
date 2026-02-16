@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../assets/Logo.png';
 import { Menu } from 'lucide-react'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -21,7 +22,10 @@ const Navbar = () => {
             <a href="#testimonials"><li className='cursor-pointer'>Testimonial</li></a>
             <a href="#booking"><li className='cursor-pointer'>Booking</li></a>
           </ul>
-          <a href="#contact"><button className='bg-amber-800 text-white hover:bg-amber-900 px-3 py-1 rounded-md'>Contact</button></a>
+         <Link to="/contact">
+            <button className='bg-amber-800 text-white hover:bg-amber-900 px-3 py-1 rounded-md'>Contact</button>
+         </Link>
+         
         </nav>
         {/* Hamburger Menu for Mobile */}
         <button className='md:hidden text-white' onClick={() => setOpen(!open)}>
