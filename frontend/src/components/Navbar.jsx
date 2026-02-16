@@ -35,13 +35,13 @@ const Navbar = () => {
         {open && (
           <div className='absolute top-16 left-0 w-full bg-amber-950 py-4  flex flex-col text-white items-center md:hidden'>
             <ul className='flex flex-col items-center gap-4 font-semibold text-lg'>
-              <a href="/"><li className='cursor-pointer'>Home</li></a>
-              <a href="#menu"><li className='cursor-pointer'>Menu</li></a>
-              <a href="#about"><li className='cursor-pointer'>About</li></a>
-              <a href="#testimonials"><li className='cursor-pointer'>Testimonial</li></a>
-              <a href="#booking"><li className='cursor-pointer'>Booking</li></a>
+              <a href="/" onClick={()=> setOpen(false)}><li className='cursor-pointer'>Home</li></a>
+              <a href="#menu" onClick={()=> setOpen(false)}><li className='cursor-pointer'>Menu</li></a>
+              <a href="#about" onClick={()=> setOpen(false)}><li className='cursor-pointer'>About</li></a>
+              <a href="#testimonials" onClick={()=> setOpen(false)}><li className='cursor-pointer'>Testimonial</li></a>
+              <a href="#booking" onClick={()=> setOpen(false)}><li className='cursor-pointer'>Booking</li></a>
             </ul>
-            <Link to="/contact">
+            <Link to="/contact" onClick={()=> setOpen(false)}>
               <button className='bg-amber-800 text-white hover:bg-amber-900 px-3 py-1 rounded-md mt-4'>Contact</button>
             </Link>
             <div className='text-white flex pt-10 justify-end text-xs'>
