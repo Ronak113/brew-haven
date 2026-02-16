@@ -9,3 +9,14 @@ export const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS,
     }
 });
+
+const sendEmail = async ({ to, subject, html }) => {
+  return transporter.sendMail({
+    from: `"Brew Haven" <${process.env.EMAIL_USER}>`,
+    to,
+    subject,
+    html,
+  });
+};
+
+export default sendEmail;

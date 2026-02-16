@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
-import { transporter } from '../utils/sendEmail';
+import sendEmail from '../utils/sendEmail';
 
 
 
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
     }
 
     //USER EMAIL
-    await transporter.sendMail({
+    await sendEmail.sendMail({
        from: `"Brew Haven" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "Reservation Confirmed 🍽️",
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
     });
 
      // ADMIN EMAIL
-    await transporter.sendMail({
+    await sendEmail.sendMail({
       from: `"Brew Haven" <${process.env.EMAIL_USER}>`,
       to: process.env.ADMIN_EMAIL,
       subject: "New Table Reservation 🚨",
