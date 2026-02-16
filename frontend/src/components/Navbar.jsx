@@ -39,8 +39,11 @@ const Navbar = () => {
               <a href="#menu"><li className='cursor-pointer'>Menu</li></a>
               <a href="#about"><li className='cursor-pointer'>About</li></a>
               <a href="#testimonials"><li className='cursor-pointer'>Testimonial</li></a>
+              <a href="#booking"><li className='cursor-pointer'>Booking</li></a>
             </ul>
-            <a href="#contact"><button className='bg-amber-800 text-white hover:bg-amber-900 px-3 py-1 rounded-md mt-4'>Contact</button></a>
+            <Link to="/contact">
+              <button className='bg-amber-800 text-white hover:bg-amber-900 px-3 py-1 rounded-md mt-4'>Contact</button>
+            </Link>
             <div className='text-white flex pt-10 justify-end text-xs'>
               <h1>Made with ❤️ by Ronak</h1>
             </div>
