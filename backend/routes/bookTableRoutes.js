@@ -21,26 +21,11 @@ router.post("/", async (req, res) => {
     }
 
     // USER EMAIL
-    await sendEmail({
-      to: email,
-      subject: "Reservation Confirmed 🍽️",
-      html: `
-        <h3>Hello ${name},</h3>
-        <p>Your table is reserved.</p>
-        <p><b>Date:</b> ${date}</p>
-        <p><b>Time:</b> ${time}</p>
-        <p><b>Guests:</b> ${guests}</p>
-        <br/>
-        <p>Thank you for choosing Brew Haven ☕</p>
-      `,
-    });
-
-    // ADMIN EMAIL
-    await sendEmail({
+     await sendEmail({
       to: process.env.ADMIN_EMAIL,
-      subject: "New Table Reservation 🚨",
+      subject: "New Table Booking",
       html: `
-        <h3>New Booking Received</h3>
+        <h2>New Booking</h2>
         <p><b>Name:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Phone:</b> ${phone}</p>
@@ -50,6 +35,20 @@ router.post("/", async (req, res) => {
       `,
     });
 
+    // Email to USER
+    await sendEmail({
+      to: email,
+      subject: "Booking Confirmation - Brew Haven",
+      html: `
+        <h2>Booking Confirmed</h2>
+        <p>Hello ${name},</p>
+        <p>Your table has been booked successfully.</p>
+        <p><b>Date:</b> ${date}</p>
+        <p><b>Time:</b> ${time}</p>
+        <p><b>Guests:</b> ${guests}</p>
+        <p>Thank you for choosing Brew Haven ☕</p>
+      `,
+    });
     res.status(201).json({ message: "Booking successful & email sent" });
   });
 });
