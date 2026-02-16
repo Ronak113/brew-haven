@@ -1,8 +1,8 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
-const db = require('./config/db');
+dotenv.config();
 
 const app = express();
 
@@ -16,10 +16,10 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
-const contactRoutes = require('./routes/contactRoutes');
+import contactRoutes from './routes/contactRoutes.js'
 app.use('/api/contact', contactRoutes);
 
-const bookTableRoutes = require('./routes/bookTableRoutes');
+import bookTableRoutes from './routes/bookTableRoutes.js'
 app.use('/api/book-table', bookTableRoutes);
 
 

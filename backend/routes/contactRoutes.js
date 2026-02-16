@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const db = require('../config/db');
+import db from '../config/db.js'
 
 // POST /api/contact - Create a new contact message
 router.post('/', async (req, res) => {
