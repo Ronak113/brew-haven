@@ -38,15 +38,15 @@ router.post("/", async (req, res) => {
     // Email to USER
     await sendEmail({
       to: email,
-      subject: "Booking Confirmation - Brew Haven",
+      subject: "Booking Confirmation - Brew Haven ☕",
       html: `
         <h2>Booking Confirmed</h2>
-        <p>Hello ${name},</p>
-        <p>Your table has been booked successfully.</p>
-        <p><b>Date:</b> ${date}</p>
-        <p><b>Time:</b> ${time}</p>
-        <p><b>Guests:</b> ${guests}</p>
-        <p>Thank you for choosing Brew Haven ☕</p>
+        <p>Dear ${name},</p>
+        <p>Your table has been successfully booked for ${guests} guests on ${date} at ${time}.</p>
+        <p>We look forward to serving you at Brew Haven ☕!</p>
+        <p>Best Regards,
+          Brew Haven Team
+        </p>
       `,
     });
     res.status(201).json({ message: "Booking successful & email sent" });
