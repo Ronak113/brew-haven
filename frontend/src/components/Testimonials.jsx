@@ -44,6 +44,7 @@ const Testimonials = () => {
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
+    slidesToShow:3,
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
@@ -75,7 +76,6 @@ const Testimonials = () => {
       },
     ],
   };
-  
   return (
     <div id="testimonials" className="py-20 bg-amber-100">
       <div className="max-w-7xl mx-auto">
