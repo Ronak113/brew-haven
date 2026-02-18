@@ -39,35 +39,43 @@ const TestimonialData = [
 
 const Testimonials = () => {
   const settings = {
-  dots: true,
-  arrows: false,
-  infinite: true,
-  speed: 500,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  cssEase: "linear",
-  pauseOnHover: true,
-  pauseOnFocus: true, 
-
-  slidesToShow: 3,
-  slidesToScroll: 1,
-
-  responsive: [
-    {
-      breakpoint: 640,   // tablet+
-      settings: {
-        slidesToShow: 1,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    responsive: [
+      {
+        breakpoint: 10000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
       },
-    },
-    {
-      breakpoint: 1024,  // desktop+
-      settings: {
-        slidesToShow: 1,
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
       },
-    },
-  ],
-};
-
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  
   return (
     <div id="testimonials" className="py-20 bg-amber-100">
       <div className="max-w-7xl mx-auto">
