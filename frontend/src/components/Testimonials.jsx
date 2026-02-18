@@ -62,7 +62,7 @@ const Testimonials = () => {
     {
       breakpoint: 1024,  // desktop+
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
       },
     },
   ],
