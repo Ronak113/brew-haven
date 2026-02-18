@@ -44,7 +44,7 @@ const Testimonials = () => {
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
-    slidesToShow:3,
+    slidesToShow:1,
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
