@@ -1,5 +1,5 @@
 import React from "react";
-import  coffee  from '../assets/coffee5.png'
+import  coffee  from '../assets/heroimage.png'
 import beanImg1 from '../assets/bean1.png'
 import bean2 from '../assets/bean2.png'
 import { motion as Motion} from 'framer-motion'
@@ -15,7 +15,7 @@ const Hero = () => {
             whileInView={{ opacity:1, x:0 }}
             transition={{ duration: 1, delay:0.2 }} 
             className="text-amber-900 font-semibold font-cursive text-lg">
-            Welcome to Brew Haven___
+            Welcome to Ella Mia London_____
           </Motion.h3>
 
           <Motion.h1 
@@ -23,13 +23,13 @@ const Hero = () => {
             whileInView={{ opacity:1, x:0 }}
             transition={{ duration: 1, delay:0.4 }} 
             className="text-4xl md:text-6xl font-bold font-cursive2">
-            Experience Artisanal <span className="text-amber-900">Coffee</span> at Brew Haven</Motion.h1>
+            Experience Artisanal <span className="text-amber-900">Coffee</span> at Ella Mia </Motion.h1>
 
           <Motion.p
             initial={{ opacity:0, x:-60 }}
             whileInView={{ opacity:1, x:0 }}
             transition={{ duration: 1.2, delay:0.6 }}
-          >Indulge in our carefully crafted brews, made from ethically sourced beans and brewed to perfection.</Motion.p>
+           className="font-cursive">“A little taste of London in every cup.”</Motion.p>
 
           <Motion.div 
             initial={{ opacity:0, x:-70 }}
@@ -37,7 +37,7 @@ const Hero = () => {
             transition={{ duration: 1.4, delay:0.8 }}
           className="flex gap-2">
             <a href="#menu"><button className="bg-amber-950 text-white px-3 py-2 rounded-md">View Menu</button></a>
-            <a href="#menu"><button className="bg-transparent border border-amber-900 text-amber-900 rounded-md px-3 py-2">Our Story</button></a>
+            <a href="#booking"><button className="bg-transparent border border-amber-900 text-amber-900 rounded-md px-3 py-2">Book Table</button></a>
           </Motion.div>
         </div>
         {/* Image Section */}
@@ -46,13 +46,13 @@ const Hero = () => {
            initial={{ opacity:0, scale: 0.7}}
            whileInView={{ opacity:1, scale:1}}
            transition={{ duration: 1.5, delay:0.5 }}
-          src={coffee} alt="" className="w-[500px]"/>
+          src={coffee} alt="" className="w-[350px] sm:w-[350px] md:w-[500px] mx-auto"/>
         </div>
         <Motion.img 
          initial={{ opacity:0, x:400, scale: 0.7}}
          whileInView={{ opacity:1, x:0, scale:1, rotate:45}}
          transition={{ duration: 1.8, delay:0.8 }}
-        src={bean2} alt="" className="absolute hidden md:block bottom-20 left-36 x-10 w-20 rotate-45" />
+        src={bean2} alt="" className="absolute hidden md:block bottom-10 left-36 x-10 w-20 rotate-45" />
         <Motion.img
          initial={{ opacity:0, x:600, y:200, scale: 0.7}}
          whileInView={{ opacity:1, x:0, y:0, scale:1}}

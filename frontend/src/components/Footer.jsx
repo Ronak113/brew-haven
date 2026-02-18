@@ -1,6 +1,8 @@
 import React from 'react'
 import FooterBg from '../assets/coffee-footer.jpg'
 import {FaFacebook} from 'react-icons/fa6'
+import {FaInstagram } from 'react-icons/fa'
+import Logo from '../assets/ellamia_round.png';
 
 const FooterLinks = [
         { title: 'Home', link: '#' },
@@ -25,10 +27,15 @@ const Footer = () => {
        <div className='bg-black/40 min-h-[400px]'>
         <div className='max-w-6xl mx-auto py-10 px-6 flex flex-col md:flex-row justify-between items-center h-full'>
             <div className='mb-6 md:mb-0 text-center md:text-left'>
-                <h2 className='text-2xl font-bold mb-4 font-cursive'>Brew Haven</h2>
-                <p className='font-cursive2'>123 Coffee St, Caffeine City, CA 90210</p>
+               <div className="flex items-center gap-3 mb-4">
+                    <img src={Logo} alt="logo" className="h-16 w-16" />
+                    <h2 className="text-2xl font-bold font-cursive">
+                     Ella Mia London
+                    </h2>
+                </div>
+                <p className='font-cursive2'> 45 St Martin's Ln, London WC2N 4HX, United Kingdom</p>
                 <p className='font-cursive2'>Email:
-                    <a href="mailto:info@brewhaven.com" className='text-white hover:text-yellow-400'> info@brewhaven.com</a>
+                    <a href="mailto:info@brewhaven.com" className='text-white hover:text-yellow-400'> info@ellamia.com</a>
                 </p>
                 <p className='font-cursive2'>Phone: (123) 456-7890</p>
             </div>
@@ -48,12 +55,16 @@ const Footer = () => {
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='text-white hover:text-yellow-400 text-2xl'>
                         <FaFacebook />
                     </a>
+                    <a href="https://www.instagram.com/ellamialondon/?hl=en" target="_blank" rel="noopener noreferrer" className='text-white hover:text-yellow-400 text-2xl'>
+                        <FaInstagram/>
+                    </a>
+                    
                     {/* Add other social media icons similarly */}
                 </div>
             </div>
         </div>
         <div className='bg-black/70 text-center py-4 '>
-            <p className='text-sm font-cursive2'>&copy; {new Date().getFullYear()} Brew Haven. All rights reserved.</p>
+            <p className='text-sm font-cursive2'>&copy; {new Date().getFullYear()} Ella Mia London. All rights reserved.</p>
             <p className='text-sm font-cursive2'>developed by <a href="https://www.linkedin.com/in/ronak-vasoya/" className='text-yellow-400 hover:underline'>Ronak Vasoya</a></p>
         </div>
 

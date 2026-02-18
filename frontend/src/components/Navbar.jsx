@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/ellamia_round.png';
 import { Menu } from 'lucide-react'
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className='flex items-center'>
           <img src={Logo} alt="Brew Haven Logo" className='h-10 w-10 mr-2' />
-          <h1 className='text-2xl text-white font-cursive'>Brew Haven</h1>
+          <h1 className='text-2xl text-white font-cursive'>Ella Mia London</h1>
         </div>
         {/* menu section */}
         <nav className='md:flex hidden items-center gap-7'>

@@ -7,26 +7,32 @@ import { motion } from 'framer-motion'
 const TestimonialData = [
   {
     id: 1,
-    name: "Vanshika",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Sophia Williams",
+    text: "Ella Mia London is my go-to spot for coffee and brunch. The ambiance is beautiful, and every cup feels thoughtfully crafted. It’s the perfect place to relax and unwind.",
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
-    name: "Rohit",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "James Carter",
+    text: "From the interiors to the flavors, everything feels premium. The coffee is rich, the desserts are irresistible, and the service is always warm and welcoming." ,
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
-    name: "Ankit",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Amelia Brown",
+    text: "I love how stylish yet cozy this café feels. The drinks are unique, and the food presentation is stunning. Every visit feels like a little escape to London.",
     img: "https://picsum.photos/104/104",
   },
   {
+    id: 4,
+    name: "Isabella Turner",
+    text: "A truly beautiful café experience. The flavors are balanced, the atmosphere is calm, and the staff make you feel at home. It’s my favorite café in the city.",
+    img: "https://picsum.photos/105/105"
+  },
+  {
     id: 5,
-    name: "Aman",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Oliver Grant",
+    text: "Ella Mia London delivers quality in every detail. Amazing coffee, delicious treats, and a vibe that makes you want to stay longer. Highly recommended.",
     img: "https://picsum.photos/103/103",
   },
 ];
@@ -37,6 +43,7 @@ const Testimonials = () => {
     arrows: false,
     infinite: true,
     speed: 500,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,

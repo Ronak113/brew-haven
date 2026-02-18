@@ -1,6 +1,7 @@
 import React from 'react'
 import Img1 from '../assets/coffee-white.png'
 import Img2 from '../assets/coffee2.png'
+import Img3 from '../assets/coffeee3.png'
 import  { motion }  from 'framer-motion'
 
 const MenuData = [
@@ -8,26 +9,20 @@ const MenuData = [
         id: 1,
         img: Img2,
         name: "Espressso",
-        description: "A rich and creamy blend of espresso, steamed milk, and frothy foam.",
+        description: "A bold and intense shot of finely ground coffee, brewed under high pressure for a rich aroma and deep, full-bodied flavor.",
     },
     {
         id: 2,
         img: Img1,  
         name: "Americano",
-        description: "A perfect balance of espresso, steamed milk, and a thick layer of foam.",
+        description: "A smooth blend of espresso and hot water, delivering a lighter taste while preserving the rich coffee character.",
     },
     {
         id: 3,
-        img: Img2,
+        img: Img3,
         name: "Cappuccino",
-        description: "A bold shot of espresso diluted with hot water for a smooth taste.",
+        description: "A perfect balance of espresso, steamed milk, and velvety foam, topped with creamy texture and classic coffee warmth.",
     },
-    {
-        id: 4,
-        img: Img2,
-        name: "Cappuccino",
-        description: "A bold shot of espresso diluted with hot water for a smooth taste.",
-    }
 
 ];
 const Menu = () => {
@@ -47,7 +42,7 @@ const Menu = () => {
              initial={{opacity: 0, y: 100}}
              whileInView={{opacity: 1, y: 0}}
              transition={{duration: 1.5, delay: 0.5}}
-            className='grid grid-cols-1 px-5 sm:grid-cols-2 md:grid-cols-4 gap-14 md:gap-15 place-items-center'>
+            className='grid grid-cols-1 px-5 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-15 place-items-center'>
                 {MenuData.map((menu) => (
                     <div className='rounded-2xl bg-white hover:bg-amber-900 transition-all hover:text-white relative shadow-xl
                     duration-high group max-w-[300px]'>
@@ -65,6 +60,11 @@ const Menu = () => {
                 ))}
                 
             </motion.div> 
+
+                {/* view more section */}
+                <div className='flex justify-center items-center pt-10 gap-2'>
+                    <a href="https://issuu.com/ennismore_/docs/ss23_em_menu_1_?fr=xIAEoAT3_NTU1"><button className="text-amber-900  font-cursive underline px-3 py-2 ">View more Menu</button></a>
+                </div>
         </div>
     </div>
   )
