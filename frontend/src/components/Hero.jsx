@@ -46,7 +46,7 @@ const Hero = () => {
            initial={{ opacity:0, scale: 0.7}}
            whileInView={{ opacity:1, scale:1}}
            transition={{ duration: 1.5, delay:0.5 }}
-          src={coffee} alt="" className="w-[350px] sm:w-[340px] md:w-[500px] mx-auto"/>
+          src={coffee} alt="" className="w-[330px] sm:w-[350px] md:w-[500px] mx-auto"/>
         </div>
         <Motion.img 
          initial={{ opacity:0, x:400, scale: 0.7}}
