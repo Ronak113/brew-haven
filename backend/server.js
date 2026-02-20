@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors({
     origin: 
-    "https://ellamialondon-omega.vercel.app/",
+    "https://ellamialondon-omega.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
      
