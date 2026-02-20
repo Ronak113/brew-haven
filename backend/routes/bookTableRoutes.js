@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
         <p>Your table has been successfully booked for ${guests} guests on ${date} at ${time}.</p>
         <p>We look forward to serving you at Brew Haven ☕!</p>
         <p>Best Regards,
-          Brew Haven Team
+          Ella Mia London Team
         </p>
       `,
     });
