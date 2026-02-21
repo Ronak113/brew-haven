@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
     // Email to USER
     await sendEmail({
       to: email,
-      subject: "Booking Confirmation - Brew Haven ☕",
+      subject: "Booking Confirmation - Ellamia London☕",
       html: `
         <h2>Booking Confirmed</h2>
         <p>Dear ${name},</p>
